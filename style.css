@@ -300,3 +300,102 @@ body {
     }
 
 }
+/* =====================================
+   PHONE / PWA POLISH
+===================================== */
+
+html,
+body {
+    overscroll-behavior: none;
+}
+
+body {
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+}
+
+#game,
+#game canvas {
+    touch-action: none;
+}
+
+.install-btn {
+    margin: 14px auto 0;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 999px;
+    background: #ff5c8a;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #a92f57;
+}
+
+.install-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #a92f57;
+}
+
+.mobile-tip {
+    display: none;
+    margin-top: 10px;
+    color: #aaa1af;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    body {
+        min-height: 100dvh;
+        padding-left: max(8px, env(safe-area-inset-left));
+        padding-right: max(8px, env(safe-area-inset-right));
+        padding-bottom: max(18px, env(safe-area-inset-bottom));
+    }
+
+    .game-wrapper {
+        width: 100%;
+    }
+
+    #game canvas {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    .mobile-tip {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        padding-top: 6px;
+        padding-bottom: 8px;
+    }
+
+    .game-header {
+        margin-bottom: 5px;
+    }
+
+    .game-header h1 {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    .game-header p,
+    .mobile-tip {
+        display: none;
+    }
+
+    #game canvas {
+        max-height: calc(100dvh - 155px);
+        width: auto !important;
+        max-width: 100%;
+    }
+
+    .mobile-controls {
+        margin-top: 7px;
+        transform: scale(.82);
+        transform-origin: top center;
+        margin-bottom: -25px;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Find My Heart - Mini RPG Adventure",
+  "short_name": "Find My Heart",
+  "description": "A small mobile-friendly Phaser adventure game.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#121018",
+  "theme_color": "#121018",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

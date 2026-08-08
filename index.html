@@ -1,73 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#121018">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Find My Heart">
 
     <title>Soafer Mini Game</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
-
     <main class="game-wrapper">
-
         <header class="game-header">
-
-            <h1>
-                My little surprise for you
-
-            </h1>
-
-            <p>
-                A mini game made just for you.
-            </p>
-
+            <h1>My little surprise for you</h1>
+            <p>A mini game made just for you.</p>
         </header>
 
-
-        <section
-            id="game"
-            aria-label="Happy Monthsary RPG game"
-        ></section>
-
+        <section id="game" aria-label="Happy Monthsary RPG game"></section>
 
         <div class="desktop-instructions">
-
-            <span>
-                WASD / Arrow Keys — Move
-            </span>
-
-            <span>
-                E — Interact
-            </span>
-
+            <span>WASD / Arrow Keys — Move</span>
+            <span>E — Interact</span>
         </div>
 
+        <div class="mobile-controls" aria-label="Mobile game controls">
+            <button id="upBtn" class="control-btn up" type="button" aria-label="Move up">▲</button>
+            <button id="leftBtn" class="control-btn left" type="button" aria-label="Move left">◀</button>
+            <button id="downBtn" class="control-btn down" type="button" aria-label="Move down">▼</button>
+            <button id="rightBtn" class="control-btn right" type="button" aria-label="Move right">▶</button>
+            <button id="interactBtn" class="interact-btn" type="button">INTERACT</button>
+        </div>
 
-       
-
+        <button id="installBtn" class="install-btn" type="button" hidden>Install Game</button>
+        <p class="mobile-tip">For the best phone experience, play in landscape mode.</p>
     </main>
 
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js">
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
     <script src="game.js"></script>
-
+    <script src="pwa.js"></script>
 </body>
-
 </html>
